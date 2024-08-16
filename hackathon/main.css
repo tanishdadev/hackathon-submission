@@ -1,0 +1,101 @@
+@font-face {
+    font-family: MonoLisa;
+    src: url(Monolisa\ Font.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "MonoLisa", monospace;
+}
+body{
+    background-color: #1f1f3d;
+}
+.heading {
+    margin-top: 250px;
+    margin-left: 100px;
+    display: inline-block;
+}
+
+h1 {
+    font-size: 40px;
+    border-right: 3px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2.5s steps(15), cursor .5s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+.para {
+    margin-top: 25px;
+    margin-left: 100px;
+    color: white;
+}
+
+.vrline {
+    border-left: 2px solid white;
+    height: 600px;
+    margin-left: 800px;
+    margin-top: -300px;
+}
+
+.levels {
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    background-color: #008b8b;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.cols {
+    margin-left: 900px;
+    margin-top: -560px;
+}
+
+.levels:hover {
+    transform: translateY(-10px);
+}
+
+.locked {
+    pointer-events: none;
+}
+
+.locked::before {
+    content: "🔒";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+}
+
+.unlocked {
+    pointer-events: auto;
+}
+
+.unlocked::before {
+    content: "🔓";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+}

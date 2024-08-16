@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>????</title>
+    <style>
+        @font-face {
+            font-family: MonoLisa;
+            src: url(Monolisa\ Font.ttf);
+        }
+        *{
+            font-family: "Monolisa", monospace;
+        }
+        body {
+            background-color: #1f1f3d;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #FFD700;
+            overflow: hidden;
+            position: relative;
+        }
+        .heading{
+            position: absolute;
+            text-align: center;
+            margin-top: -500px;
+            margin-left: 0px;
+            display: inline-block;
+        }
+        h1{
+            border-right: 3px solid;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(35), cursor .5s step-end infinite alternate;
+        }
+        @keyframes cursor {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+        .spinning-duck {
+            position: absolute;
+            margin-bottom: 25px;
+            margin-right: 20px;
+            font-size: 30px;
+            animation: spin 3s linear infinite;
+            white-space: pre;
+            opacity: 1;
+            transition: opacity 5s ease-out;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>The duck says to wait for a bit....</h1>
+    </div>
+    <div class="spinning-duck">
+<pre>
+    __
+  >(o )___
+   (    _)
+   <_>   
+</pre>
+    </div>
+
+    <audio id="drum-roll" src="drum-roll-please-classic-reveal-soundroll-9-9-00-04.mp3" preload="auto"></audio>
+
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const duck = document.querySelector('.spinning-duck');
+                const drumRoll = document.getElementById('drum-roll');
+                drumRoll.play();
+                duck.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = 'secretmessage.html';
+                }, 5000);
+            }, 15000);
+        });
+    </script>
+    
+    
+</body>
+</html>

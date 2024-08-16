@@ -1,0 +1,84 @@
+@font-face {
+    font-family: MonoLisa;
+    src: url(Monolisa\ Font.ttf);
+}
+
+* {
+    font-family: "Monolisa", monospace;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Monolisa", monospace;
+    background-color: #1f1f3d;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.game-container {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff6f00;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #d1d1e0;
+}
+
+#gameArea {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    border: 2px solid #333;
+    background-color: #0f0f3d;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.object {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #ff6f00;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.object:hover {
+    transform: scale(1.1);
+}
+
+#message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5252;
+    margin-top: 10px;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1f1f3d;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.content h1 {
+    margin: 0; 
+    color: white !important;
+}
